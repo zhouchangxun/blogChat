@@ -58,7 +58,7 @@ ChatRoom.prototype.bindEvent = function() {
     if(referer) {
       referer = url.parse(referer);
     }
-    if(referer && whiteList.indexOf(referer.hostname) == -1) {
+    if(false && referer && whiteList.indexOf(referer.hostname) == -1) {
       return socket.emit('pm', {
         msg: '请将服务部署在自己的服务器上玩耍~',
         type: "DISCONNECT"
